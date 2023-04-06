@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de eventos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="container-fluid d-flex flex-column alto p-0 m-0">
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid d-flex justify-content-between">
+                    <a class="navbar-brand" href="#">Events task</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="./assets/pages/bmiCalculator.html">BMI Calculator</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./assets/pages/currencyConversor.html">Currency convertor</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./assets/pages/notepad.html">Notepad</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main class="flex-grow-1 d-flex flex-column py-5">
+            <div class="accordion container" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Task #1 - BMI Calculator
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p class="text-body">
+                                <strong>Request:</strong> Create an application that calculates body mass index.
+                            </p>
+                            <p class="text-body">
+                                <strong>MVP:</strong> Pressing the Calculate button should display the result in the
+                                corresponding input.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Task #2 - Currency converter
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p class="text-body">
+                                <strong>Request:</strong> Create a currency conversion application.
+
+                            </p>
+                            <p class="text-body">
+                                <strong>MVP:</strong> It should have the default values, for example 1 dollar = 140
+                                argentinian pesos price example,
+                                and when you make a change in any of the inputs you should see reflected the
+                                corresponding value in the currency to be converted.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Task #3 - Notepad
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p class="text-body">
+                                <strong>Request: </strong> Make a notepad application
+                                
+                            </p>
+                            <p class="text-body">
+                                <strong>MVP: </strong>
+                                <ol>
+                                    <li>
+                                        Create an array where we are going to store the notes
+                                    </li>
+                                    <li>
+                                        Add a couple of test notes as follows
+                                    </li>
+                                    <li>
+                                        Create an idGlobal variable and initialize it to the same value of the last id you created you created manually, we will use this as a control for the notes.
+                                    </li>
+                                    <li>
+                                        Create a div that is going to be the container for the notes.
+                                    </li>
+                                    <li>
+                                        Create a function that paints the notes in the form of cards inside the container div
+                                    </li>
+                                    <li>
+                                        On the container div, create a small interface to create new notes: A text input for the title, a textarea for the text and 2 buttons, one to save the new note and one to clear the fields. save the new note and another one to clear the fields.
+                                    </li>
+                                    <li>
+                                        Create an addNote function which will need 2 parameters: title and text. The which should create an object of type note as in point b and add it to the array of notes. g. Create a function addNote which will need 2 parameters: title and text. notes.
+                                    </li>
+                                    <li>
+                                        When pressing the save button you must save in variables the values of the inputs and verify if they are not empty.
+and verify if they are not empty, in which case you must call the function that will add the new note and the new note and then paint the notes on the screen again.
+                                    </li>
+                                    <li>
+                                        Add in the template of the card in the function that paints a button with the text "delete note" to delete the note, for this case we will use the onClick property of the onClick the button tag and inside it we will call to a function that we will create called deleteNote() that will receive called deleteNote() that will receive as parameter the id of the note. deleteNote(${element.id}).
+                                    </li>
+                                    <li>
+                                        We will create the function deleteNote which will need the parameter id. It should delete the element whose id is equal to the one received by parameter and repaint the notes to see the change reflected.
+                                    </li>
+                                    <li>
+                                        Add a validation in the function that paints the cards, which must show a message inside the container div that says NO NOTES TO SHOW in case there are no elements in the array.
+                                    </li>
+                                    <li>Clicking on the delete button next to the save button should clear the title and text fields.</li>
+                                    <li>
+                                        add a template that creates the notes
+                                    </li>
+                                    <li>
+                                        Create the function markRealized which will receive as parameter an id and it will have to look for the element inside the array and change the performed property by the opposite value to the one opposite to the one it already has and paint the elements again on the screen to see it reflected. reflected.
+                                    </li>
+                                    <li>
+                                        Create a pair of inputs to filter by text and by notes made
+                                    </li>
+                                    <li>
+                                        Create a function to filter by the status performed, the function should receive as a parameter 1 array and return the same thing but filtered by the elements that have true in the performed property
+                                    </li>
+                                    <li>
+                                        Create a function that filters by text, which will receive as parameter an array of notes and a text. notes and a text. It must return an array filtered by the elements that include the text entered in the include the text entered in the title or the text of the note. If no text is received it shall return the received array.
+                                    </li>
+                                    <li>
+                                        When changing the text of the search input or changing the value of the checkbox, the result should be displayed on the screen. the result of the filters mentioned above should be reflected on the screen. In both cases the states of the 2 filters must be contemplated in order to have a coherent result with what is seen on the screen. result consistent with what you see on the screen. If you filter by text, you must the checkbox is checked or not, and if filter by text, the text that is displayed on the screen must be considered. filter by text, the text in the search input must be considered.
+                                    </li>
+                                </ol>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="p-2">
+            made with love by Facundo Cartolano | Minhub Cohort46
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
